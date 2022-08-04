@@ -1,0 +1,30 @@
+{
+  "ncs": {
+    "sid": "B827EBCD79FD",
+    "name": "Desigo_CC",
+    "regid": "dcc_test",
+	"pwd": "desigo",
+    "host": "192.168.1.21",
+    "port": 1883,
+	"heartbeat_secnods": 50,
+	"polling_secnods": 1
+  },
+  "udm": {
+    "id": 1,
+    "desigo_host": "192.168.1.215",
+	"desigo_username": "cc",
+	"desigo_password": "cc",
+	"alarm_point": ["B'AVF100'AVF01'AV01", "B'AVF100'AVF01'AV54", "B'AVF100'AVF02'AV196", "B'BIU11", "B'BIU12", "B'BIU13", "B'BVF100'BVF01'BV48", "B'BVF100'BVF01'BV49", "B'BVF100'BVF01'BV56", "B'BVF100'BVF01'BV57", "B'BVF100'BVF01'BV58", "B'BVF100'BVF01'BV50", "B'BVF100'BVF01'BV51", "B'BVF100'BVF01'BV52", "B'BVF100'BVF01'BV21", "B'BVF100'BVF01'BV27"],
+	"get_url":{
+		"bacnet_point_information": "https://desigo_ip/WSI/api/systembrowser/1/9/BA.ManagementView%3aManagementView.FieldNetworks.Site01.Hardware.Site01'AS01",
+		"modbus_point_information": "https://desigo_ip/WSI/api/systembrowser/1/9/BA.ManagementView%3aManagementView.FieldNetworks.ModbusTCP.Link1.Dev1",
+		"events_list": "https://desigo_ip/WSI/api/events?sorting=0"
+	},
+	"post_url":{
+		"point_list_value": "https://desigo_ip/WSI/api/values",
+		"change_value": "https://desigo_ip/WSI/api/commands/object_id.Present_Value/WritePrio08",
+		"close_alarm": "https://desigo_ip/WSI/"
+	}	
+  },
+  "ver": 1
+}

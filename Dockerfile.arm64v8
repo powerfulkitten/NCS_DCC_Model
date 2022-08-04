@@ -1,0 +1,17 @@
+FROM arm64v8/python:3.9-slim-buster
+
+WORKDIR /app
+RUN mkdir -p /app/logs
+RUN mkdir -p /app/config
+RUN chmod 777 -R /app/logs
+RUN chmod 777 -R /app/config
+
+COPY requirements.txt ./
+#RUN apt-get update && apt-get install -y build-essential
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application sources
+COPY ./__pycache__/*.pyc /app/
+
+# Run the application
+CMD ["python3","DCC_Model.pyc"]
